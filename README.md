@@ -1,6 +1,6 @@
 # ViDi
 
-![Header](https://github.com/acominf/ViDi/edit/master/docs/Imagenes/readme_header.png)
+![Header](https://raw.githubusercontent.com/acominf/ViDi/master/docs/Imagenes/readme_header.png)
 
 ## Objetivo de la aplicación
 El objetivo es generar una pagina web para la Materia de Tecnologias Web, que consista en implementar los temas vistos en clase. 
