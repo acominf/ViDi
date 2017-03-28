@@ -1,6 +1,6 @@
 # ViDi
 
-![En construcción](https://upload.wikimedia.org/wikipedia/commons/e/ef/En_construccion.jpg)
+![Header](https://github.com/acominf/ViDi/edit/master/docs/Imagenes/readme_header.png)
 
 ## Objetivo de la aplicación
 El objetivo es generar una pagina web para la Materia de Tecnologias Web, que consista en implementar los temas vistos en clase. 
