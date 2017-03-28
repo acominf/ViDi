@@ -10,41 +10,41 @@ Sera una página web enfocada a la reproducción y descarga de videos para los u
 
 ## Descripción funcional
 
-*Subir, bajar y ocultar videos:
-  *Se podrán subir videos a la aplicación y registrarlos en la base de datos con ciertos atributos para facilitar su búsqueda
-  *Se podrán eliminar videos registrados en la base de datos y eliminarlos de la aplicación
-  *Se podrá cambiar un atributo del video para que este no sea visto por los otros usuarios que no sea el administrador.
+*item Subir, bajar y ocultar videos:
+  *item Se podrán subir videos a la aplicación y registrarlos en la base de datos con ciertos atributos para facilitar su búsqueda
+  *item Se podrán eliminar videos registrados en la base de datos y eliminarlos de la aplicación
+  *item Se podrá cambiar un atributo del video para que este no sea visto por los otros usuarios que no sea el administrador.
 
-*Usuarios
-  *Registrarse
-  *Iniciar secion
-  *Cerrar sesión
-  *Eliminar cuenta
-  *Al reproducir videos genera un historial de el tipo de videos que ve
-  *Asignar una puntuación a un video
+*item Usuarios
+  *item Registrarse
+  *item Iniciar secion
+  *item Cerrar sesión
+  *item Eliminar cuenta
+  *item Al reproducir videos genera un historial de el tipo de videos que ve
+  *item Asignar una puntuación a un video
 
-*Búsqueda y filtros
-  *búsqueda por director
-  *búsqueda por actores
-  *búsqueda por país
-  *búsqueda por nombre de video
-  *búsqueda por id
-  *búsqueda por fecha 
-  *búsqueda por puntuación
-  *búsqueda por género 
+*item Búsqueda y filtros
+  *item búsqueda por director
+  *item búsqueda por actores
+  *item búsqueda por país
+  *item búsqueda por nombre de video
+  *item búsqueda por id
+  *item búsqueda por fecha 
+  *item búsqueda por puntuación
+  *item búsqueda por género 
 
-*Listas de reproducción
-  *Agregar nueva lista de reproducción
-  *Agregar videos a la lista de reproducción
-  *Reproducir lista de reproducción
-  *Eliminar videos de una lista de reproducción
-  *Modificar orden de la lista de reproducción
-  *Eliminar listas de reproducción
+*item Listas de reproducción
+  *item Agregar nueva lista de reproducción
+  *item Agregar videos a la lista de reproducción
+  *item Reproducir lista de reproducción
+  *item Eliminar videos de una lista de reproducción
+  *item Modificar orden de la lista de reproducción
+  *item Eliminar listas de reproducción
 
-*Visualización de videos
- *Reproducir videos
-  *Pausar videos
-  *Retomar video después de una pausa que cierre la página
+*item Visualización de videos
+ *item Reproducir videos
+  *item Pausar videos
+  *item Retomar video después de una pausa que cierre la página
 
 
 ## Autor(es)
