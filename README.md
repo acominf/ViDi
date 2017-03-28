@@ -10,10 +10,10 @@ Sera una página web enfocada a la reproducción y descarga de videos para los u
 
 ## Descripción funcional
 
-*item Subir, bajar y ocultar videos:
-  *item Se podrán subir videos a la aplicación y registrarlos en la base de datos con ciertos atributos para facilitar su búsqueda
-  *item Se podrán eliminar videos registrados en la base de datos y eliminarlos de la aplicación
-  *item Se podrá cambiar un atributo del video para que este no sea visto por los otros usuarios que no sea el administrador.
+*Item Subir, bajar y ocultar videos:
+  *Item Se podrán subir videos a la aplicación y registrarlos en la base de datos con ciertos atributos para facilitar su búsqueda
+  *Item Se podrán eliminar videos registrados en la base de datos y eliminarlos de la aplicación
+  *Item Se podrá cambiar un atributo del video para que este no sea visto por los otros usuarios que no sea el administrador.
 
 *item Usuarios
   *item Registrarse
