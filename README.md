@@ -42,7 +42,7 @@ Sera una página web enfocada a la reproducción y descarga de videos para los u
   - Eliminar listas de reproducción
 
 - Visualización de videos
- - Reproducir videos
+  - Reproducir videos
   - Pausar videos
   - Retomar video después de una pausa que cierre la página
 
