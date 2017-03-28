@@ -3,10 +3,10 @@
 ![En construcción](https://upload.wikimedia.org/wikipedia/commons/e/ef/En_construccion.jpg)
 
 ## Objetivo de la aplicación
-El objetivo de la aplicación es ...
+El objetivo es generar una pagina web para la Materia de Tecnologias Web, que consista en implementar los temas vistos en clase. 
 
 ## Descripción de la aplicación
-La descripción de la aplicación es ...
+Sera una página web enfocada a la reproducción y descarga de videos para los usuarios clientes, en la que podrán hacer listas de reproducción, y descargas de los videos que deseen. Como administrador podrá subir y eliminar videos, eliminar usuarios y acceder a sus perfiles para hacer modificaciones, así como tendrá el control de todas las actividades y modificaciones a la página.
 
 ## Descripción funcional
 La descripción funcional de la aplicación es ...
