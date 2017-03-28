@@ -9,22 +9,43 @@ El objetivo es generar una pagina web para la Materia de Tecnologias Web, que co
 Sera una página web enfocada a la reproducción y descarga de videos para los usuarios clientes, en la que podrán hacer listas de reproducción, y descargas de los videos que deseen. Como administrador podrá subir y eliminar videos, eliminar usuarios y acceder a sus perfiles para hacer modificaciones, así como tendrá el control de todas las actividades y modificaciones a la página.
 
 ## Descripción funcional
-La descripción funcional de la aplicación es ...
 
-### Funcionalidad 1
-La descripción de la funcionalidad 1 es ...
+*Subir, bajar y ocultar videos:
+  *Se podrán subir videos a la aplicación y registrarlos en la base de datos con ciertos atributos para facilitar su búsqueda
+  *Se podrán eliminar videos registrados en la base de datos y eliminarlos de la aplicación
+  *Se podrá cambiar un atributo del video para que este no sea visto por los otros usuarios que no sea el administrador.
 
-### Funcionalidad 2
-La descripción de la funcionalidad 2 es ...
+*Usuarios
+  *Registrarse
+  *Iniciar secion
+  *Cerrar sesión
+  *Eliminar cuenta
+  *Al reproducir videos genera un historial de el tipo de videos que ve
+  *Asignar una puntuación a un video
 
-### Funcionalidad 3
-La descripción de la funcionalidad 3 es ...
+*Búsqueda y filtros
+  *búsqueda por director
+  *búsqueda por actores
+  *búsqueda por país
+  *búsqueda por nombre de video
+  *búsqueda por id
+  *búsqueda por fecha 
+  *búsqueda por puntuación
+  *búsqueda por género 
 
-### Funcionalidad 4
-La descripción de la funcionalidad 4 es ...
+*Listas de reproducción
+  *Agregar nueva lista de reproducción
+  *Agregar videos a la lista de reproducción
+  *Reproducir lista de reproducción
+  *Eliminar videos de una lista de reproducción
+  *Modificar orden de la lista de reproducción
+  *Eliminar listas de reproducción
 
-### Funcionalidad 5
-La descripción de la funcionalidad 5 es ...
+*Visualización de videos
+ *Reproducir videos
+  *Pausar videos
+  *Retomar video después de una pausa que cierre la página
+
 
 ## Autor(es)
 El autor(es) del proyecto son:
