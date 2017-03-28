@@ -45,12 +45,11 @@ Sera una página web enfocada a la reproducción y descarga de videos para los u
   - Reproducir videos
   - Pausar videos
   - Retomar video después de una pausa que cierre la página
-
-
+  
 ## Autor(es)
 El autor(es) del proyecto son:
-- Nombre completo del autor 1 (@nombreUsuarioGitHub)
-- Nombre completo del autor 2 (@nombreUsuarioGitHub)
+- Dulce Nataly Guadarrama Mani (@DulceMani)
+- Fernando Alvarez Flores (@silver1592)
 
 ## Materia(s)
 - Tecnologías Web
