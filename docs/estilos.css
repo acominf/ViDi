@@ -1,0 +1,24 @@
+body{
+    background-color: black
+    }
+.encabezado {
+    width: 100%;
+    border: 0px;
+    margin-top: 0px;
+    background-color:#341216;
+    border-radius: 50;
+    height: 400px;
+    
+}
+#logo{
+    z-index: 100;
+    text-align: left;
+}
+#titulo{
+    /*text-decoration-style: wavy;
+    text-decoration: underline;*/
+    text-align: center;
+    color: white;
+    font-size: 800%;
+    
+}
