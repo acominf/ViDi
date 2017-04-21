@@ -5,7 +5,7 @@ body{
     width: 100%;
     border: 0px;
     margin-top: 0px;
-    background-color:#341216;
+    background-color:#5e2129;
     border-radius: 50;
     height: 400px;
     
@@ -21,4 +21,19 @@ body{
     color: white;
     font-size: 800%;
     
+}
+.Evideo{
+    width: 500px;
+    height: 250px;
+    background-color: #b796d3;
+}
+.Tvideos{
+    margin: 0 auto;
+    width: 100%;
+    border-spacing: 50px; 
+}
+.menu{
+    width: 100%;
+    height: 50px;
+    background-color: #70a82e;
 }
