@@ -4,12 +4,11 @@ body{
     }
 .encabezado {
     width: 100%;
-    height: 50%;
+  
     background-color:#651923;
     border-radius: 30px;
-    height: 10%;
+    height: 20%;
     margin: 0 auto;
-    /*box-sizing: border-box;*/
 }
 #logo{
     width: 50%;
@@ -18,7 +17,12 @@ body{
     text-align: left;
     float: left;
 }
-#inicios{float: right;}
+.playimg{
+    margin-top: 30px
+}
+#inicios{
+    margin: 10px;
+    float: right;}
 #titulo{
     /*text-decoration-style: wavy;
     text-decoration: underline;*/
@@ -28,19 +32,20 @@ body{
     
 }
 .Evideo{
-    width: 33%;
+    width: 32%;
+    height: 25%;
     background-color: #e06890;
     text-align: center;
     border-radius: 30px;
     float: left;
+    margin: 5px;
     box-sizing: border-box;
+    
 }
 .Tvideos{
     margin: 0 auto;
-    width: 10%;
-    height: 90%;
-    /*width: 100%;
-    */
+    width: 100%;
+    height: 80%;
     border-spacing: 10px; 
     box-sizing: border-box;
 }
@@ -48,9 +53,9 @@ body{
     margin: 0 auto;
     border-radius: 30px;
     width: 100%;
-    height: 50px;
+    height: 30px;
 
-    background-color: #70a82e;
+    background-color: #257f1a;
     /*box-sizing: border-box;*/
 }
 
@@ -60,9 +65,11 @@ body{
     max-width: 1000px;
     margin: 0 auto;
     overflow: hidden;
-    border: 3px solid rebeccapurple;
+    /*border: 3px solid rebeccapurple;*/
     /*box-sizing: border-box;*/
 }
 @media screen and (max-width: 800px){
-    
+    .Evideo{
+        width: 100%;
+    }
 }
