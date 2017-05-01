@@ -1,11 +1,13 @@
 body{
-    background-color: #29355a;
+    /*background-color: #29355a;*/
+    background-image: url("Imagenes/fondo.jpg");
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: white;
     }
 .encabezado {
     width: 100%;
-  
-    background-color:#651923;
+    /*background-color:#651923;*/
+    background-color: rgba(101, 25,35, 0.9);
     border-radius: 30px;
     height: 20%;
     margin: 0 auto;
@@ -16,13 +18,15 @@ body{
     z-index: 100;
     text-align: left;
     float: left;
+    opacity:1;
 }
 .playimg{
     margin-top: 30px
 }
 #inicios{
     margin: 10px;
-    float: right;}
+    float: right;
+    color: white}
 #titulo{
     /*text-decoration-style: wavy;
     text-decoration: underline;*/
@@ -34,7 +38,9 @@ body{
 .Evideo{
     width: 32%;
     height: 25%;
-    background-color: #e06890;
+    /*background-color: #e06890; rosa*/
+    /*background-color: #29355a; azul*/
+    background-color: rgba(41, 37, 90, 0.9);
     text-align: center;
     border-radius: 30px;
     float: left;
@@ -68,8 +74,30 @@ body{
     /*border: 3px solid rebeccapurple;*/
     /*box-sizing: border-box;*/
 }
+#iniciosesion, #registro{
+    
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    background-color:#651923;
+}
+.datosusuario{
+    margin: 0 auto;
+    width: 80%;
+    
+}
 @media screen and (max-width: 800px){
     .Evideo{
         width: 100%;
+    }
+    
+}
+@media screen and (max-width: 700px){
+    #iniciosesion{
+        width: 90%;
     }
 }
