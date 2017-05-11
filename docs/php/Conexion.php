@@ -1,46 +1,60 @@
-<<?php 
-	class Conexion
-	{
-		function __construct()
-		{
-			$host = "localhost";
-			$user = "root";
-			$pass = "";
-			$database = "ViDi";
+<?php
 
-			$this->con = mysql_connect($host,$user,$pass,$database);
-			//$this->con = mysqli_connect($host,$user,$pass,$database);
-		}
+class Conexion
+{
+    private $conexion;
+    private $tabla;
 
-		function __destruct()
-		{
-			$this->con->close();
-		}
+    function __construct() 
+    {
+        $ubicacion ="localhost";
+        $usuario="root";
+        $contrasenia="";
+        $basedatos="vidi";
+        
+        $this->conexion = new mysqli($server,$usuario,$contrasenia,$basedatos);
 
-		function queryDML($query)
-		{
-			$result = mysql_query ($query,$this->con);
-			//$result = mysqli_query ($query,$this->con);
+        if($this->conexion->connect_error)
+            die($this->conexion->connect_error);
+    }
 
-			if($result)
-				return TRUE;
-			else
-				return FALSE;
-		}
+    function __destruct ()
+    {
+        $this->conexion->close();
+    }
 
-		function querySQL($query)
-		{
-			$resultado = mysql_query ($query,$this->con);
-			//$resultado = mysqli_query ($query,$this->con);
-			$tabla = [];
-			$fila ="";
+    function querySQL($query)
+    {
+        $resultado = $this->conexion->query($query);
+        $this->tabla=null;
 
-			while (mysql_fetch_assoc($resultado, $fila)) {
-				array_push($tabla, $fila);
-			}
+        if(!$resultado)
+            die($this->conexion->error);
+        else
+        {
+            $this->tabla[0] = array_keys($resultado->fetch_array(MYSQLI_ASSOC));
+            
+            for($i=0;$i<$resultado->num_rows;$i++)
+            {
+                $resultado->data_seek($i);
+                $this->tabla[$i+1]= $resultado->fetch_array(MYSQLI_NUM);
+            }
+        }
 
-			$resultado->close();
-			return $tabla;
-		}
-	}
- ?>
+        $resultado->close();
+
+        return $this->tabla;
+    }
+
+    function queryDML($query)
+    {
+        $resultado = $this->conexion->query($query);
+        $this->tabla=null;
+
+        if(!$resultado)
+            die($this->conexion->error);
+
+        return "Operacion realizada con exito";
+    }
+}
+?>
