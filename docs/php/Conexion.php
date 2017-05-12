@@ -7,7 +7,7 @@ class Conexion
 
     function __construct() 
     {
-        $ubicacion ="localhost";
+        $server ="localhost";
         $usuario="root";
         $contrasenia="";
         $basedatos="vidi";

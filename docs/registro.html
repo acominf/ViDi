@@ -11,24 +11,24 @@
 <body>
     <div id="registro">
         <div class="datosusuario">
-            <form action="">
+            <form action="agregaUsuario.php" method="post">
 
                 <h3>Nombre:</h3>
-                <input type="text">  
+                <input type="text" name="name" placeholder="Nombre">  
             
                 <h3>Apellido:</h3>
-                <input type="text">
+                <input type="text" name="lastName" placeholder="Apellido">
                 
                 <h3>Edad:</h3>
-                <input type="text">
+                <input type="number" min="0" max="125" name="age" placeholder="Edad">
 
                 <h3>Nombre de Ususario:</h3>
-                <input type="text">
+                <input type="text" name="usr" placeholder="Usuario">
                 
                 <h3>Contraseña:</h3>
-                <input type="text">
+                <input type="password" name="pass" placeholder="Contraseña">
                 <br>
-                <input type="button" value="Registrarce">
+                <input type="submit" value="Registrarce">
                 
             </form>
         </div>
