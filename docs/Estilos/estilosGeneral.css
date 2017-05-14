@@ -1,0 +1,62 @@
+
+
+body{ /*Contiene imagen de fondo el tipo de letra y el color */
+    /*background-color: #29355a;*/
+    background-image: url("../Imagenes/fondo.jpg");
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: white;
+    
+    }
+
+.contenedor{/*clase para hacer que el contenido no llegue hasta las horillas y se mantenga centrado*/
+    width: 80%; 
+    /*height: 1000px;   */
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.ImgUsuario{
+    border-radius: 100%;
+    margin: 0 auto;
+    width: 90%;
+}
+.link{
+    color: white;
+}
+.push{
+    width: 30px;
+    height: 200px;
+    background-color: rgba(101, 25,35, 0.9);
+    border-radius: 0px 10px 10px 0px;
+    position: absolute;
+    float: left;
+    z-index: 100;
+}
+.Barra{/*Barra donde se muestran los datos */
+    width: 20%;
+    /*height: 95%;*/
+    text-align: center;
+    min-height: 200px;
+    background-color: rgba(101, 25,35, 0.9);
+    float: left;
+    position: absolute;
+    z-index: 100;
+    display: none;
+}
+.repV{
+    width: 95%;
+    float: right;
+}
+
+@media screen and (max-width: 800px){
+    .Barra{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .Barra{
+        width: 100%;
+    }
+}

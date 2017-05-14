@@ -1,0 +1,27 @@
+#iniciosesion, #registro{
+    
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    background-color: rgba(101, 25,35, 0.9);
+    /*background-color:#651923;*/
+    border-radius: 30px;
+}
+.datosusuario{
+    margin: 0 auto;
+    width: 80%;
+    
+}
+
+@media screen and (max-width: 500px){
+    #iniciosesion{
+        width: 90%;
+    }
+     #registro{
+        width: 90%; 
+     }
+}
