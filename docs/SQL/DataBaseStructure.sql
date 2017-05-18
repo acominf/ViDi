@@ -34,8 +34,8 @@ create table video_clasif(
 
 create table user_video(
 	idVideo int not null,
-	idUser int not null
-	puntuacion int not null
+	idUser int not null,
+	puntuacion int not null,
 
 	CHECK (puntuacion>=0 && puntuacion<=5)
 );

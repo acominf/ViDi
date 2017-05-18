@@ -16,17 +16,4 @@
     /*min-height: 9px;*/
     margin-top: 20px;
 }
-#NomUs{
-    width: 80%;
-    height: 80px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-#icName{
-    width: 10%;
-    height: 100%;
-    float: left;
-}
-#nom{
-    float: left;
-}
+

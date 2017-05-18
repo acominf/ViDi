@@ -48,7 +48,20 @@ body{ /*Contiene imagen de fondo el tipo de letra y el color */
     width: 95%;
     float: right;
 }
-
+.icName{
+    width: 10%;
+    height: 100%;
+    float: left;
+}
+.nom{
+    float: left;
+}
+.NomUs{
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+    overflow: hidden;
+}
 @media screen and (max-width: 800px){
     .Barra{
         width: 50%;
