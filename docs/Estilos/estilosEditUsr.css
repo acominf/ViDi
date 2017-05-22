@@ -12,6 +12,9 @@
 #edi{
     float: right;
 }
+#fileImg{
+    width: 80px;
+}
 .ContDatos{
     
     width: 500px;

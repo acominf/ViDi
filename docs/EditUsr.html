@@ -18,7 +18,7 @@
                 $('.activeUs').removeAttr('disabled')
             })
             $('#edit2').click(function(){
-                $('.activeI').removeAttr('disabled')
+                $('#fileImg').removeAttr('disabled')
             })
             $('#edit3').click(function(){
                 $('.activeD').removeAttr('disabled')
@@ -28,6 +28,20 @@
             })
         })
     </script>
+
+    <script>    
+        function addImage(input){
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onloadend = function(e) {
+                    var result=e.target.result;
+                    $('#imge').attr("src",result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+    
     <div class="contenedor">
         
         <div class="Barra">
@@ -60,7 +74,8 @@
                     </div> 
                     <div id="edi">
                         <div id="edit2"><img src="./Imagenes/edit-pen.png" alt="Editar" id="editimg" class="edit2"><p>Editar</p></div>
-                        <input type="image" src="./Imagenes/us1.jpg" disabled="disabled" class="activeI"  width="100px">
+                        <img src="./Imagenes/us1.jpg" id="imge" width="100px" height="100px" alt=""><br>
+                        <input name="file-input" value="Subir" type="file" onchange="addImage(this)" disabled="disabled" id="fileImg">
                     </div>
                     
                     <div class="ed">
@@ -78,6 +93,7 @@
                     <input type="submit" value="Guardar" id="guardar"> 
                 </div>
             </form>
+
         </div>
 </body>
 </html>
