@@ -1,3 +1,5 @@
+<?php session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -19,7 +21,13 @@
           
               <div id="logo"> <img src="Imagenes/logovidi1.svg" alt="logo" width="100%" height="100%"></div>
               
-              <a href="IniSesion.html" id="inicios">Iniciar Sesion</a>
+              <?php
+              if(isset($_SESSION['idUs']) && isset($_SESSION['nomUs']))
+                echo '<a class="link" href="EditUsr.html" id="inicios">'.$_SESSION['nomUs'].'</a>';
+              else
+                echo '<a class="link" href="IniSesion.php" id="inicios">Iniciar Sesion</a>';
+              ?>
+              
           
         </div>
       

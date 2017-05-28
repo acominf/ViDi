@@ -1,0 +1,37 @@
+<?php session_start();
+   if(isset($_SESSION['idUs'])== false)
+    header('Location: index.html');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery-3.1.1.min.js"></script>
+    <link rel="icon" type="image/png" href="Imagenes/iconovidi.png" />
+    <link rel="stylesheet" href="./Estilos/estilosGeneral.css">
+    <link rel="stylesheet" href="Estilos/estiloSubvideo.css">
+    <script src="efectosBarra.js"></script>
+    <title>lista de videos</title>
+</head>
+<body>
+    <div class="contenedor">
+        
+         <?php include('barra.php'); ?>
+        <div class="ContDatos">
+            <ul> 
+                <?php 
+                    require_once "./Conexion.php";
+                    $conexion = new Conexion();
+                    $query = "SELECT id, nombre FROM video where idUser= $_SESSION['idUs']";
+                    $tabla = $conexion->querySQL($query);
+                    for()
+                ?>   
+                <!--<li>Nombre del Video</li>-->
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

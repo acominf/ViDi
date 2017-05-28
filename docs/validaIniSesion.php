@@ -1,6 +1,6 @@
-<?php 
+<?php session_start();
 	require_once "./php/Conexion.php";
-	$url = "index.html";
+	$url = "EditUsr.html";
 
 	if($_POST)
 	{
@@ -10,8 +10,12 @@
 		$query = "select * from users where usr='".$usr."' and pass ='".$pass."';";
 		$res = $con->querySQL($query);
 
-		if(count($res)==1 && $res[0]!==null)
+		if(count($res) > 0)
+		{
+			$_SESSION['idUs'] = $res[1][0];
+			$_SESSION['nomUs'] = $usr;
 			header ("Location: $url");
+		}
 		else
 			header("Location:".$_SERVER['HTTP_REFERER']); 
 	}

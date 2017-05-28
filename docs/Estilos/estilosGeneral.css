@@ -23,7 +23,16 @@ body{ /*Contiene imagen de fondo el tipo de letra y el color */
 }
 .link{
     color: white;
+    text-decoration: none;
 }
+
+.link:hover
+{
+    color: #CCC;
+    border: 1px solid yellow;
+    border-radius: 5px;
+}
+
 .push{
     width: 30px;
     height: 200px;
@@ -62,6 +71,24 @@ body{ /*Contiene imagen de fondo el tipo de letra y el color */
     margin: 0 auto;
     overflow: hidden;
 }
+.boton{
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color:palegreen;
+    color: rgb(101, 25,35);
+    font-size: 15px;
+    padding: 3px 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /*border-color: rgb(101, 25,35);*/
+}
+
+.boton:hover
+{
+    background-color: pink;
+    font-size: 17px;
+}
+
 @media screen and (max-width: 800px){
     .Barra{
         width: 50%;

@@ -41,26 +41,9 @@
             }
         }
     </script>
-    
     <div class="contenedor">
-        
-        <div class="Barra">
-            <img src="./Imagenes/us1.jpg" alt="usuario" class="ImgUsuario">
 
-            <div class="NomUs">
-                <img src="./Imagenes/iconovidi.svg" alt="incono_name" class="icName">
-                <h1 class="nom">Nombre</h1>
-            </div>
-
-            <a href="EditUsr.html" class="link">Configuración</a>
-            <br>
-            <a href="" class="link">Mis Listas</a>
-            <br>
-            <a href="" class="link">Favoritos</a>
-
-        </div>
-        
-        <div class="push"></div>
+    <?php include('barra.php'); ?>
 
         <div class="ContDatos">
 
@@ -75,7 +58,7 @@
                     <div id="edi">
                         <div id="edit2"><img src="./Imagenes/edit-pen.png" alt="Editar" id="editimg" class="edit2"><p>Editar</p></div>
                         <img src="./Imagenes/us1.jpg" id="imge" width="100px" height="100px" alt=""><br>
-                        <input name="file-input" value="Subir" type="file" onchange="addImage(this)" disabled="disabled" id="fileImg">
+                        <input name="file-input" value="Subir" type="file" accept="image/*" onchange="addImage(this)" disabled="disabled" id="fileImg">
                     </div>
                     
                     <div class="ed">
@@ -90,7 +73,7 @@
                         <h3>Contraseña</h3>
                         <input type="password" name="pass" value="contraseña" disabled="disabled" class="activeC">
                     </div>
-                    <input type="submit" value="Guardar" id="guardar"> 
+                    <input type="submit" value="Guardar" id="guardar" class="boton"> 
                 </div>
             </form>
 

@@ -51,10 +51,12 @@ class Conexion
         $resultado = $this->conexion->query($query);
         $this->tabla=null;
 
-        if(!$resultado)
-            die($this->conexion->error);
+        if(!$resultado){
+            // die($this->conexion->error);
+            header("Location: DespErrores.php?r=2");
+        }
 
-        return "Operacion realizada con exito";
+        return true;
     }
 }
 ?>

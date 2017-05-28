@@ -14,28 +14,12 @@
 <body>
     <div class="contenedor">
         
-        <div class="Barra">
-            <img src="./Imagenes/us1.jpg" alt="usuario" class="ImgUsuario">
-
-            <div class="NomUs">
-                <img src="./Imagenes/iconovidi.svg" alt="incono_name" class="icName">
-                <h1 class="nom">Nombre</h1>
-            </div>
-
-            <a href="EditUsr.html" class="link">Configuración</a>
-            <br>
-            <a href="" class="link">Mis Listas</a>
-            <br>
-            <a href="" class="link">Favoritos</a>
-
-        </div>
-        
-        <div class="push"></div>
+         <?php include('barra.php'); ?>
         <video src="./Videos/v1.mp4" class="repV" controls></video>
 
         <form action="">
             <div id="cajacom">
-                <input type="text" name="coment" id="comentario" placeholder="Comentario">
+                <textarea type="text" name="coment" id="comentario" placeholder="Comentario"></textarea>
             </div>
         </form>
         

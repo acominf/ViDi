@@ -1,9 +1,10 @@
-CREATE DATABASE ViDi;
+DROP DATABASE IF EXISTS vidi;
+CREATE DATABASE vidi;
 
 use vidi;
 
 CREATE Table users(
-	id int auto_increment,
+	id int auto_increment not null,
     usr varchar(16) not null,
     pass varchar(16) not null,
     nombre varchar(20) NOT null,
@@ -14,10 +15,12 @@ CREATE Table users(
 );
 
 create table video(
-	id int not null auto_increment,
+	id bigint not null auto_increment,
 	nombre varchar(50) not null,
+	contenido LONGBLOB not null,
+	idUser int not null,
 	PRIMARY KEY (id),
-	UNIQUE nombre_usuario (nombre)
+	UNIQUE nombre_video (nombre)
 );
 
 create table clasif(

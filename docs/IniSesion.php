@@ -11,10 +11,16 @@
 </head>
 <body>
     <div class="ContDatos">
-        <img src="Imagenes/iconovidi.svg" alt="inicio" width="100%" height="40%">
+        <a href="index.html"><img src="Imagenes/iconovidi.svg" alt="inicio" width="100%" height="200px"></a>
         <div class="datosusuario">
 
-            <form action="./iniSecion.php" method="post">
+            <?php 
+                if(isset($_GET['reg']))
+                {
+                    echo '<h2>Registro exitoso</h2>';
+                }
+            ?>
+            <form action="./validaIniSesion.php" method="post">
                 <div>
                     <h3>Nombre de Usuario:</h3>
                     <input type="text" name="usr" placeholder="Usuario">
@@ -25,10 +31,10 @@
                     <input type="password" name="pass" placeholder="Contraseña">
                 </div>
                 
-                <input type="submit" value="Iniciar">  
+                <input class="boton" type="submit" value="Iniciar">  
             </form>
 
-            <a href="registro.html">Registrace</a>
+            <a href="registro.html" class="link">Regístrate</a>
         </div>
     </div>
 </body>
