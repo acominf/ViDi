@@ -10,15 +10,12 @@
       private $edad = "";
       private $url = "";
 
-      public function getId(){ return $id; }
-      public function getEdad() { return $edad; }
-      public function getImage() { return $url; }
-
 		function __construct($_id) 
 		{
          $c = new Conexion();
+
          $dt = $c->querySQL('select * from users where id = '.$_id);
-         if(count($dt)==2)
+         if(count($dt)==1)
          {
             $this->id = $dt[1][0];
             $this->usr = $dt[1][1];
@@ -47,6 +44,7 @@
             echo '<a href="Subirvideos.php" class="link">Subir un Video</a><br>';
             echo '<a href="Listas.php" class="link">Mis Listas</a><br>';
             echo '<a href="" class="link">Favoritos</a>';
+            echo '<a href="./php/cerrarSesion.php" class="link">Cerrar Sesion</a>';
             echo '</div>';
             echo '<div class="push"></div>';
          }
@@ -58,5 +56,10 @@
 
 			return $videos;
 		}
+
+      public function getId(){ return $this->id; }
+      public function getEdad() { return $this->edad; }
+      public function getImage() { return $this->url; }
+      public function getNombre() { return $this->nombre; }
 	}
 ?>

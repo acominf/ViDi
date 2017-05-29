@@ -7,14 +7,14 @@
 		private $nombre = "";
 
 		//Si regresa 0 es que no existe el video
-		function getID() { return $id; } 
+		function getID() { return $this->id; } 
 
 		function __construct($id)
 		{
 			//Busca en la base
 			$c = new Conexion();
 			$res = $c->querySQL('Select * from Video  where id = '.$id);
-			if(count($res)==2)
+			if(count($res)==1)
 			{
 				$this->id = $res[0][0];
 				$this->nombre = $res[0][1];

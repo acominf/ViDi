@@ -1,6 +1,7 @@
 <?php 
   session_start();  
   require_once './php/Video.php';
+  require_once './php/Usuario.php';
   require_once './php/Conexion.php';
 ?>
 <!DOCTYPE html>
@@ -24,7 +25,10 @@
               
               <?php
                 if(isset($_SESSION['idUs']))
-                  echo '<a class="link" href="EditUsr.php" id="inicios">'.$_SESSION['nomUs'].'</a>';
+                {
+                  $usr = new Usuario($_SESSION['idUs']);
+                  echo '<a class="link" href="EditUsr.php" id="inicios">'.$usr->getNombre().'</a>';
+                }
                 else
                   echo '<a class="link" href="IniSesion.php" id="inicios">Iniciar Sesion</a>';
               ?>

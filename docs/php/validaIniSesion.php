@@ -12,8 +12,9 @@
 
 		if(count($res) > 0)
 		{
-			$_SESSION['idUs'] = $res[1][0];
-			header ("Location: $url");
+			$_SESSION['idUs'] = $res[0][0];
+			echo $_SESSION['idUs'];
+			//header ("Location: $url");
 		}
 		else
 			header("Location:".$_SERVER['HTTP_REFERER']); 
