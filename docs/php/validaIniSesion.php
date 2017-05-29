@@ -1,6 +1,6 @@
 <?php session_start();
-	require_once "./php/Conexion.php";
-	$url = "EditUsr.html";
+	require_once "./Conexion.php";
+	$url = "../EditUsr.php";
 
 	if($_POST)
 	{
@@ -13,7 +13,6 @@
 		if(count($res) > 0)
 		{
 			$_SESSION['idUs'] = $res[1][0];
-			$_SESSION['nomUs'] = $usr;
 			header ("Location: $url");
 		}
 		else

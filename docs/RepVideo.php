@@ -1,3 +1,11 @@
+<?php session_start(); 
+    require_once "./php/Usuario.php";
+
+    if(isset($_SESSION['idUs']))
+        $usr = new Usuario($_SESSION['idUs']);
+    else
+        header('Location: index.html');
+ ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,7 +22,7 @@
 <body>
     <div class="contenedor">
         
-         <?php include('barra.php'); ?>
+         <?php $usr->toBar(); ?>
         <video src="./Videos/v1.mp4" class="repV" controls></video>
 
         <form action="">

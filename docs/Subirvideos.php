@@ -1,3 +1,10 @@
+<?php session_start();
+    require_once './php/Usuario.php';
+    if(isset($_SESSION['idUs']))
+        $usr = new Usuario($_SESSION['idUs']);
+    else
+        header('Location: index.html');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +21,7 @@
 <body>
     <div class="contenedor">
         
-         <?php include('barra.php'); ?>
+        <?php $usr->toBar(); ?>
         <script>    
             function addVid(input){
                 if (input.files && input.files[0]) {
@@ -29,11 +36,10 @@
         </script>
         <div class="ContDatos">
             <div class="centraDatv">
-            <form method="POST" action="./php/UploadVideo.php" enctype="multipart/form-data">
+            <form method="post" action="./php/UploadVideo.php" enctype="multipart/form-data" >
                 Nombre del Video:<br>   
                 <input type="text" name="novid" placeholder="Nombre del Video"><br>
-                <input type="file" name="fileVi" accept="video/*" onchange="addVid(this)" ><br>
-                <video src="" class="repV" id="vid" controls></video>
+                <input type="file" name="fileVi" accept="video/*" id="fileVi"><br>
                 <input type="submit" value="Subir archivo" class="boton"/>
             </form>
             </div>

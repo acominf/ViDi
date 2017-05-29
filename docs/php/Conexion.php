@@ -5,6 +5,7 @@ class Conexion
     private $conexion;
     private $tabla;
 
+    //Crea una conexion con la base de datos ViDi
     function __construct() 
     {
         $server ="localhost";
@@ -18,21 +19,19 @@ class Conexion
             die($this->conexion->connect_error);
     }
 
-    function __destruct ()
-    {
-        $this->conexion->close();
-    }
+    function __destruct (){ $this->conexion->close(); }
 
+    //Realiza una consulta a la base de datos y regresa un resultado (SQL)
     function querySQL($query)
     {
         $resultado = $this->conexion->query($query);
-        $this->tabla=null;
+        $arrayName = array();
 
         if(!$resultado)
             die($this->conexion->error);
         else
         {
-            $this->tabla[0] = array_keys($resultado->fetch_array(MYSQLI_ASSOC));
+            //$this->tabla[0] = array_keys($resultado->fetch_array(MYSQLI_ASSOC));
             
             for($i=0;$i<$resultado->num_rows;$i++)
             {
@@ -46,6 +45,7 @@ class Conexion
         return $this->tabla;
     }
 
+    //Ejecuta un comando en la base de datos. No regresa nada (DML)
     function queryDML($query)
     {
         $resultado = $this->conexion->query($query);

@@ -1,3 +1,9 @@
+<?php session_start()
+    if(isset($_SESSION['idUs']))
+        $usr = new Usuario($_SESSION['idUs']);
+    else
+        $usr = new Usuario(0);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +20,7 @@
 <body>
     <div class="contenedor">
         
-        <?php include('barra.php'); ?>
+        <?php $usr->toBar(); ?>
 
         
             <div class="ContDatos">

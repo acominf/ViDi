@@ -17,8 +17,7 @@ CREATE Table users(
 create table video(
 	id bigint not null auto_increment,
 	nombre varchar(50) not null,
-	contenido LONGBLOB not null,
-	idUser int not null,
+	url varchar(100) not null,
 	PRIMARY KEY (id),
 	UNIQUE nombre_video (nombre)
 );

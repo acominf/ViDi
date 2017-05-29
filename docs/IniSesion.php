@@ -20,7 +20,7 @@
                     echo '<h2>Registro exitoso</h2>';
                 }
             ?>
-            <form action="./validaIniSesion.php" method="post">
+            <form action="./php/validaIniSesion.php" method="post">
                 <div>
                     <h3>Nombre de Usuario:</h3>
                     <input type="text" name="usr" placeholder="Usuario">

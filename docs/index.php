@@ -1,4 +1,7 @@
-<?php session_start();
+<?php 
+  session_start();  
+  require_once './php/Video.php';
+  require_once './php/Conexion.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,8 +16,6 @@
     
   </head>
   <body>
- 
-
     <div class="contenedor">
      
         <div class="encabezado">
@@ -22,15 +23,13 @@
               <div id="logo"> <img src="Imagenes/logovidi1.svg" alt="logo" width="100%" height="100%"></div>
               
               <?php
-              if(isset($_SESSION['idUs']) && isset($_SESSION['nomUs']))
-                echo '<a class="link" href="EditUsr.html" id="inicios">'.$_SESSION['nomUs'].'</a>';
-              else
-                echo '<a class="link" href="IniSesion.php" id="inicios">Iniciar Sesion</a>';
+                if(isset($_SESSION['idUs']))
+                  echo '<a class="link" href="EditUsr.php" id="inicios">'.$_SESSION['nomUs'].'</a>';
+                else
+                  echo '<a class="link" href="IniSesion.php" id="inicios">Iniciar Sesion</a>';
               ?>
-              
           
         </div>
-      
       <main>
         <div class="menu">
         </div>
@@ -38,33 +37,31 @@
     
 
     <div class="Tvideos">
-        <div class="Evideo"> 
-                <video width="90%" height="90%" controls>
-                    <source src="./Videos/v1.mp4" type="video/mp4">
-                </video>
-                
-        </div>
-        <div class="Evideo">
-          <img src="Imagenes/play.png" alt="play" class="playimg">
-        </div>
-        <div class="Evideo">
-          <img src="Imagenes/play.png" alt="play" class="playimg">
-        </div>
-        <div class="Evideo">
-          <img src="Imagenes/play.png" alt="play" class="playimg">
-        </div>
-        <div class="Evideo">
-          <img src="Imagenes/play.png" alt="play" class="playimg">
-        </div>
-        <div class="Evideo">
-          <img src="Imagenes/play.png" alt="play" class="playimg">
-        </div>
-        
+      <?php 
+        $nVideos = 9;
+        $c = new Conexion();
+        $i=0;
+
+        $videos = $c->querySQL('Select * from Video');
+        for($i =  0; $i<count($videos);$i++)
+        {
+          echo "entro";
+          $v = new Video($videos[$i][0]);
+          $v.showMin();
+        }
+
+        if(count($videos) < $nVideos)
+        {
+          for (;$i < $nVideos; $i++) { 
+            $v = new Video(0);
+            $v->showMin();
+          }
+        }
+      ?>
     </div>
      <footer>
 
      </footer>
   </div>
-
   </body>
 </html>

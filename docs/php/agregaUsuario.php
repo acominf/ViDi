@@ -1,6 +1,6 @@
 <?php 
-	require_once "./php/Conexion.php";
-	$url = "IniSesion.php?reg=1";
+	require_once "./Conexion.php";
+	$url = "../IniSesion.php?reg=1";
 
 	if(isset($_POST))
 	{
@@ -11,8 +11,9 @@
 		$age = $_POST["age"];
 		$usr = $_POST["usr"];
 		$pass = $_POST["pass"];
+		$url = './Imagenes/us1.jpg';
 
-		$query = "insert into users values (null,'$usr','$pass','$name','$lastName','$age')";
+		$query = "insert into users values (null,'$usr','$pass','$name','$lastName','$age','$url')";
 
 		echo $query;
 

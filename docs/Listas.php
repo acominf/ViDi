@@ -1,6 +1,10 @@
 <?php session_start();
-   if(isset($_SESSION['idUs'])== false)
-    header('Location: index.html');
+    require_once './php/Usuario.php';
+
+    if(isset($_SESSION['idUs'])== false)
+        header('Location: index.html');
+    else
+        $user = new Usuario($_SESSION['idUs']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +22,7 @@
 <body>
     <div class="contenedor">
         
-         <?php include('barra.php'); ?>
+         <?php $user->toBar(); ?>
         <div class="ContDatos">
             <ul> 
                 <?php 

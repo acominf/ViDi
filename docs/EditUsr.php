@@ -1,3 +1,12 @@
+<?php 
+    session_start(); 
+    require_once "./php/Usuario.php";
+
+    if(isset($_SESSION['idUs']))
+        $usr = new Usuario($_SESSION['idUs']);
+    else
+        header('Location: index.html');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +52,7 @@
     </script>
     <div class="contenedor">
 
-    <?php include('barra.php'); ?>
+    <?php $usr->toBar(); ?>
 
         <div class="ContDatos">
 

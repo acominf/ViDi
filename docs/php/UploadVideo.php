@@ -1,23 +1,36 @@
-<?php session_start();
-    if(isset($_SESSION['idUs']== false)
-    {
+<?php
+
+    session_start();
+    if(isset($_SESSION['idUs'])== false)
         header("Location: index.html");
-    }
+
     require_once "./Conexion.php";
 
-    if(isset($_POST)== false && sizeof($_FILES)==0){
-        header('Location: DespErrores.php?r=1');
-    }
-    $conexion = new Conexion();
-    $nombreVid = $_POST['novid'];
-    $nomFile=$_FILES['fileVi']['tmp_name'];
-    $tam = $_FILES['fileVi']['size'];
-    $tipo = $_FILES['fileVi']['type'];
-    $fp = fopen($nomFile,"rb");
-    $contenido = fread($fp,$tam);
-    $contenido = addslashes($contenido);
-    fclose($fp);
-    $query = "INSERT INTO video VALUES(null,'$nombreVid','$contenido',$_SESSION['idUs'])";
+    if (is_uploaded_file($_FILES['fileVi']['tmp_name']))
+    {
+        $conexion = new Conexion();
+        $nombreVid = $_POST['novid'];
 
-    $conexion->queryDML($query);
+        $nombreDirectorio = "../videos";
+        $nombreFichero = $_FILES['file']['name'];
+        $nombreCompleto = $nombreDirectorio . $nombreFichero;
+
+        if (is_file($nombreCompleto))
+        {
+            $idUnico = time();
+            $nombreFichero = $idUnico . "-" . $nombreFichero;
+
+            move_uploaded_file($_FILES['file']['tmp_name'], $nombreDirectorio.$nombreFichero);
+
+            $query = "insert into video values(null,'".$nombreVid."','".$nombreCompleto."',0)";
+
+            $conexion->queryDML($query);
+        }
+        else
+            print ("No se ha podido subir el fichero");
+    }
+    else
+    {
+        print ("No se ha podido subir el fichero");
+    }
 ?>
