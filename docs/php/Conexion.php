@@ -55,7 +55,6 @@ class Conexion
         if(!$resultado){
             // die($this->conexion->error);
             //header("Location: ./DespErrores.php?r=2");
-            var_dump($resultado);
         }
 
         return true;

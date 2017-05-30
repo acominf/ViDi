@@ -5,7 +5,7 @@
     if(isset($_SESSION['idUs']))
         $usr = new Usuario($_SESSION['idUs']);
     else
-        header('Location: index.html');
+        header('Location: index.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,17 +56,16 @@
 
         <div class="ContDatos">
 
-            <form action="">
-
+            <form method="post" action="./php/updateUsuario.php">
                 <div class="datosusuario">
                     <div class="ed">
-                        <div id="edit1"><img src="./Imagenes/edit-pen.png" alt="Editar" id="editimg" class="edit1"><p>Editar</p></div>
+                        <div id="edit1"><!--<img src="./Imagenes/edit-pen.png" alt="Editar" id="editimg" class="edit1"><p>Editar</p></div>-->
                         <h3>Nombre de usuario</h3>
                         <input type="text" name="usrEdit" value="username" disabled="disabled" class="activeUs"> 
                     </div> 
                     <div id="edi">
                         <div id="edit2"><img src="./Imagenes/edit-pen.png" alt="Editar" id="editimg" class="edit2"><p>Editar</p></div>
-                        <img src="./Imagenes/us1.jpg" id="imge" width="100px" height="100px" alt=""><br>
+                        <img src="<?php $usr->getImage();?>" id="imge" width="100px" height="100px" alt=""><br>
                         <input name="file-input" value="Subir" type="file" accept="image/*" onchange="addImage(this)" disabled="disabled" id="fileImg">
                     </div>
                     
@@ -77,11 +76,13 @@
                         <input type="text" name="ApEdit" value="Apellido" disabled="disabled" class="activeD">
                         <input type="number" name="edadEdit" value="22" min="0" max="125" disabled="disabled" class="activeD">
                     </div>
+                    <!--
                     <div class="ed">
                         <div id="edit4"><img src="./Imagenes/edit-pen.png" alt="Editar" id="editimg" class="edit4"><p>Editar</p></div>
                         <h3>Contraseña</h3>
                         <input type="password" name="pass" value="contraseña" disabled="disabled" class="activeC">
                     </div>
+                    -->
                     <input type="submit" value="Guardar" id="guardar" class="boton"> 
                 </div>
             </form>
