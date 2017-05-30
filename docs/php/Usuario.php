@@ -37,13 +37,13 @@
                         echo '<div class="Barra">';
                         echo '<img src="'.$this->url.'" alt="usuario" class="ImgUsuario">';
                         echo '<div class="NomUs">';
-                        echo '<img src="./Imagenes/iconovidi.svg" alt="incono_name" class="icName">';
+                        echo '<a href="index.php"><img src="./Imagenes/iconovidi.svg" alt="incono_name" class="icName"></a>';
                         echo '<h1 class="nom">'.$this->usr.'</h1>';
                         echo '</div>';
                         echo '<a href="EditUsr.php" class="link">Configuración</a><br>';
                         echo '<a href="Subirvideos.php" class="link">Subir un Video</a><br>';
                         echo '<a href="Listas.php" class="link">Mis Listas</a><br>';
-                        echo '<a href="" class="link">Favoritos</a><br>';
+                        echo '<a href="Favoritos.php" class="link">Favoritos</a><br>';
                         echo '<a href="./php/cerrarSesion.php" class="link">Cerrar Sesion</a>';
                         echo '</div>';
                         echo '<div class="push"></div>';

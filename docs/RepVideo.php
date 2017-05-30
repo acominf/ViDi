@@ -25,7 +25,7 @@
     <div class="contenedor">
         
          <?php $usr->toBar(); ?>
-        <video src='<?php echo $vid->url; ?>' class="repV" controls></video>
+        <video src='<?php echo $vid->getUrl(); ?>' class="repV" controls></video>
 
         <form action="./php/calificaVideo.php" method="POST">
             <div id="cajacom">
@@ -34,7 +34,7 @@
                 <h3>Deja un comentario</h3>
                 <textarea type="text" name="coment" id="comentario" placeholder="Comentario"></textarea><br>
                 <input type="submit" value="Enviar">
-                <input type="hidden" value='<?php echo $vid->id; ?>' name="idvideo">
+                <input type="hidden" value='<?php echo $vid->getID(); ?>' name="idvideo">
             </div>
         </form>
         

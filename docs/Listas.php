@@ -24,6 +24,7 @@
         
          <?php $user->toBar(); ?>
         <div class="ContDatos">
+            <div class="centraDatv">
              <?php 
                     require_once "./php/Conexion.php";
                     $conexion = new Conexion();
@@ -33,7 +34,8 @@
                     for($i = 1;$i<count($tabla);$i++){
                         echo '<a class="link" href="./RepVideo.php?idVid='.$tabla[$i][0].'">'.$tabla[$i][0].' - '.$tabla[$i][1].'</a><br>';
                     }
-                ?>   
+                ?>  
+            </div> 
         </div>
 
     </div>

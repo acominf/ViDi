@@ -8,6 +8,8 @@
 
 		//Si regresa 0 es que no existe el video
 		function getID() { return $this->id; } 
+		function getUrl() { return $this->url;}
+		function getNombre() {return $this->nombre;}
 
 		function __construct($id)
 		{
@@ -30,9 +32,11 @@
 			
 			if($this->id != 0)
 			{
+				echo '<a href="./RepVideo.php?idVid='.$this->id.'">';
 				echo '<video width="90%" height="90%" controls>';
 				echo '<source src="'.$this->url.'" type="video/mp4">';
 				echo '</video>';
+				echo '</a>';
 			}
 			else
 			{
@@ -40,6 +44,21 @@
 				echo '<img src="Imagenes/play.png" alt="play" class="playimg">';
 			}
 			echo '</div>';
+		}
+		function califica($idUser,$cal){
+			$c = new Conexion();
+			$res = $c->querySQL('select * from user_video');
+
+			if(count($res)<1)
+			{
+				//insert
+				$c->queryDML('insert into user_video values('.$this->id.','.$idUser.','.$cal.');');
+			}
+			else
+			{
+				//update
+				$c->queryDML('update user_video set puntuacion='.$cal.'  where id = '.$id.' and idUser='.$idUser);
+			}
 		}
 	}
 ?>
