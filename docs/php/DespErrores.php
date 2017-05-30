@@ -1,4 +1,6 @@
-<?php session_start()
+<?php session_start();
+    require_once "Usuario.php";
+    
     if(isset($_SESSION['idUs']))
         $usr = new Usuario($_SESSION['idUs']);
     else

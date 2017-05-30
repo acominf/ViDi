@@ -14,11 +14,11 @@
 			//Busca en la base
 			$c = new Conexion();
 			$res = $c->querySQL('Select * from Video  where id = '.$id);
-			if(count($res)==1)
+			if(count($res)==2)
 			{
-				$this->id = $res[0][0];
-				$this->nombre = $res[0][1];
-				$this->url = $res[0][2];
+				$this->id = $res[1][0];
+				$this->nombre = $res[1][1];
+				$this->url = $res[1][2];
 			}
 			else
 				$this->id = 0;
@@ -31,7 +31,7 @@
 			if($this->id != 0)
 			{
 				echo '<video width="90%" height="90%" controls>';
-				echo '<source src="$this->url" type="video/mp4">';
+				echo '<source src="'.$this->url.'" type="video/mp4">';
 				echo '</video>';
 			}
 			else

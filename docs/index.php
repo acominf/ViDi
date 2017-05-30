@@ -50,11 +50,10 @@
         $i=0;
 
         $videos = $c->querySQL('Select * from Video');
-        for($i =  0; $i<count($videos);$i++)
+        for($i =  1; $i<count($videos);$i++)
         {
-          echo "entro";
           $v = new Video($videos[$i][0]);
-          $v.showMin();
+          $v->showMin();
         }
 
         if(count($videos) < $nVideos)
