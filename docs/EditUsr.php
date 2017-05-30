@@ -61,20 +61,20 @@
                     <div class="ed">
                         <div id="edit1"><!--<img src="./Imagenes/edit-pen.png" alt="Editar" id="editimg" class="edit1"><p>Editar</p></div>-->
                         <h3>Nombre de usuario</h3>
-                        <input type="text" name="usrEdit" value="username" disabled="disabled" class="activeUs"> 
+                        <input type="text" name="usrEdit" value=<?php echo  '"'.$usr->getUsr().'"';?> disabled="disabled" class="activeUs"> 
                     </div> 
                     <div id="edi">
                         <div id="edit2"><img src="./Imagenes/edit-pen.png" alt="Editar" id="editimg" class="edit2"><p>Editar</p></div>
-                        <img src="<?php $usr->getImage();?>" id="imge" width="100px" height="100px" alt=""><br>
+                        <img src="<?php echo $usr->getImage();?>" id="imge" width="100px" height="100px" alt=""><br>
                         <input name="file-input" value="Subir" type="file" accept="image/*" onchange="addImage(this)" disabled="disabled" id="fileImg">
                     </div>
                     
                     <div class="ed">
                         <div id="edit3"><img src="./Imagenes/edit-pen.png" alt="Editar" id="editimg" class="edit3"><p>Editar</p></div>
                         <h3>Datos Personales</h3>   
-                        <input type="text" name="nomEdit" value="Nombre" disabled="disabled" class="activeD">
-                        <input type="text" name="ApEdit" value="Apellido" disabled="disabled" class="activeD">
-                        <input type="number" name="edadEdit" value="22" min="0" max="125" disabled="disabled" class="activeD">
+                        <input type="text" name="nomEdit" value=<?php echo '"'.$usr->getNombre().'"';?> disabled="disabled" class="activeD">
+                        <input type="text" name="ApEdit" value=<?php echo '"'.$usr->getApellido().'"';?> disabled="disabled" class="activeD">
+                        <input type="number" name="edadEdit" value="<?php echo $usr->getEdad();?>" min="0" max="125" disabled="disabled" class="activeD">
                     </div>
                     <!--
                     <div class="ed">

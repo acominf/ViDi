@@ -2,16 +2,17 @@
 	session_start();
 	require_once "Conexion.php";
     if(isset($_SESSION['idUs'])== false)
-        header("Location: index.html");
+        header("Location: index.php");
 
     require_once "Usuario.php";
-
+echo "q pasa";
     if($_POST)
     {
     	$c = new Conexion();
     	var_dump($_POST);
 
     	//imagen
+		echo "q pasa";
     	if(isset($_POST['file-input']) && $_POST['file-input']!=""&& is_uploaded_file($_FILES['file-input']['tmp_name']))
     	{
     		$nombreDirectorio = "../imagenes/";

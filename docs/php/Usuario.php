@@ -61,5 +61,7 @@
       public function getEdad() { return $this->edad; }
       public function getImage() { return $this->url; }
       public function getNombre() { return $this->nombre; }
+      public function getUsr() {return $this->usr;}
+      public function getApellido(){return $this->apellido;}
 	}
 ?>

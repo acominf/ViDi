@@ -15,7 +15,7 @@
 		{
 			//Busca en la base
 			$c = new Conexion();
-			$res = $c->querySQL('Select * from Video  where id = '.$id);
+			$res = $c->querySQL('Select * from video  where id = '.$id);
 			if(count($res)==2)
 			{
 				$this->id = $res[1][0];

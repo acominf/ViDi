@@ -45,12 +45,12 @@
 
     <div class="Tvideos">
       <?php 
-        $nVideos = 9;
+        $nVideos = 10;
         $c = new Conexion();
         $i=0;
 
-        $videos = $c->querySQL('Select * from Video');
-        for($i =  1; $i<count($videos);$i++)
+        $videos = $c->querySQL('Select * from video');
+        for($i =  1; $i<count($videos) && $i<$nVideos;$i++)
         {
           $v = new Video($videos[$i][0]);
           $v->showMin();
