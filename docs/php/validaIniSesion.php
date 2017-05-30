@@ -7,14 +7,16 @@
 		$con = new Conexion();
 		$usr = $_POST["usr"];
 		$pass = $_POST["pass"];
-		$query = "select * from users where usr='".$usr."' and pass ='".$pass."';";
+		$query = "select * from users where usr='$usr' and pass ='$pass'";
 		$res = $con->querySQL($query);
+
+		//echo count($res);
 
 		if(count($res) > 0)
 		{
-			$_SESSION['idUs'] = $res[0][0];
-			echo $_SESSION['idUs'];
-			//header ("Location: $url");
+			$_SESSION['idUs'] = $res[1][0];
+			//echo '<h1>'. $_SESSION['idUs'].'</h1>';
+			header ("Location: $url");
 		}
 		else
 			header("Location:".$_SERVER['HTTP_REFERER']); 

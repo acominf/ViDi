@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" href="Imagenes/iconovidi.png" />
     <link rel="stylesheet" href="./Estilos/estilosGeneral.css">
     <link rel="stylesheet" href="Estilos/estilosEditUsr.css">
-    <script src="efectosBarra.js"></script>
+    <script src="./js/efectosBarra.js"></script>
     <title>Editar datos</title>
 </head>
 <body>

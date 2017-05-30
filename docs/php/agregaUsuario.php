@@ -1,6 +1,6 @@
 <?php 
 	require_once "./Conexion.php";
-	$url = "../IniSesion.php?reg=1";
+	// $url = "../IniSesion.php?reg=1";
 
 	if(isset($_POST))
 	{
@@ -21,7 +21,7 @@
 
 		//if(count($res)==1 && $res[0]!==null)
 		if($res == true)
-			header ("Location: $url");
+			header ("Location: ../IniSesion.php?reg=1");
 		else
 			header("Location:".$_SERVER['HTTP_REFERER']); 
 	}

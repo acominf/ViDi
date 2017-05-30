@@ -16,7 +16,7 @@
     <link rel="icon" type="image/png" href="Imagenes/iconovidi.png" />
     <link rel="stylesheet" href="./Estilos/estilosGeneral.css">
     <link rel="stylesheet" href="./Estilos/estiloRepVideo.css">
-    <script src="efectosBarra.js"></script>
+    <script src="./js/efectosBarra.js"></script>
     <title>Video</title>
 </head>
 <body>

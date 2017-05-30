@@ -24,13 +24,16 @@
               <div id="logo"> <img src="Imagenes/logovidi1.svg" alt="logo" width="100%" height="100%"></div>
               
               <?php
-                if(isset($_SESSION['idUs']))
+                if(isset($_SESSION['idUs']) && $_SESSION['idUs']!='')
                 {
                   $usr = new Usuario($_SESSION['idUs']);
                   echo '<a class="link" href="EditUsr.php" id="inicios">'.$usr->getNombre().'</a>';
+                 // echo 'entre1 '. $_SESSION['idUs'];
                 }
-                else
+                else{
                   echo '<a class="link" href="IniSesion.php" id="inicios">Iniciar Sesion</a>';
+                 // echo 'entre2';
+                }
               ?>
           
         </div>

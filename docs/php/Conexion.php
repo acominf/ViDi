@@ -31,7 +31,7 @@ class Conexion
             die($this->conexion->error);
         else
         {
-            //$this->tabla[0] = array_keys($resultado->fetch_array(MYSQLI_ASSOC));
+            $this->tabla[0] = array_keys($resultado->fetch_array(MYSQLI_ASSOC));
             
             for($i=0;$i<$resultado->num_rows;$i++)
             {
@@ -48,12 +48,13 @@ class Conexion
     //Ejecuta un comando en la base de datos. No regresa nada (DML)
     function queryDML($query)
     {
+        // echo $query;
         $resultado = $this->conexion->query($query);
         $this->tabla=null;
 
         if(!$resultado){
             // die($this->conexion->error);
-            header("Location: DespErrores.php?r=2");
+            header("Location: ./DespErrores.php?r=2");
         }
 
         return true;

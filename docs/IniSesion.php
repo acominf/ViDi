@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="ContDatos">
-        <a href="index.html"><img src="Imagenes/iconovidi.svg" alt="inicio" width="100%" height="200px"></a>
+        <a href="index.php"><img src="Imagenes/iconovidi.svg" alt="inicio" width="100%" height="200px"></a>
         <div class="datosusuario">
 
             <?php 
