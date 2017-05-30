@@ -29,7 +29,7 @@ class Conexion
 
         if(!$resultado)
             die($this->conexion->error);
-        else
+        else if($resultado->num_rows>0)
         {
             $this->tabla[0] = array_keys($resultado->fetch_array(MYSQLI_ASSOC));
             
