@@ -34,6 +34,10 @@
                                 break;
                                 case 2: echo 'Error 2: Error al modificar Datos';
                                 break;
+                                case 3: echo "No se ha podido subir el fichero_1";
+                                break;
+                                case 4: echo "No se ha podido subir el fichero_2";
+                                break;
                             }
                         ?>
                     </h2>

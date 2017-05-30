@@ -24,16 +24,16 @@
         
          <?php $user->toBar(); ?>
         <div class="ContDatos">
-            <ul> 
-                <?php 
-                    require_once "./Conexion.php";
+             <?php 
+                    require_once "./php/Conexion.php";
                     $conexion = new Conexion();
-                    $query = "SELECT id, nombre FROM video where idUser= $_SESSION['idUs']";
+                    $query = "SELECT id, nombre FROM video";
                     $tabla = $conexion->querySQL($query);
-                    for()
+                    echo '<h2>Lista de los Videos</h2>';
+                    for($i = 1;$i<count($tabla);$i++){
+                        echo '<a class="link" href="./RepVideo.php?idVid='.$tabla[$i][0].'">'.$tabla[$i][0].' - '.$tabla[$i][1].'</a><br>';
+                    }
                 ?>   
-                <!--<li>Nombre del Video</li>-->
-            </ul>
         </div>
 
     </div>

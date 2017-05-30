@@ -24,13 +24,15 @@
 
             $conexion->queryDML($query);
 
-            header("Location: Subirvideos.html");
+            header("Location: ../Listas.php");
         }
         else
-            print ("No se ha podido subir el fichero_2");
+            // print ("No se ha podido subir el fichero_2");
+            header("Location: ./DespErrores.php?r=3");
     }
     else
     {
-        print ("No se ha podido subir el fichero_1");
+        // print ("No se ha podido subir el fichero_1");
+        header("Location: ./DespErrores.php?r=2");
     }
 ?>
