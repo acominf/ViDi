@@ -56,7 +56,7 @@
 
         <div class="ContDatos">
 
-            <form method="post" action="./php/updateUsuario.php">
+            <form method="post" action="./php/updateUsuario.php" enctype="multipart/form-data">
                 <div class="datosusuario">
                     <div class="ed">
                         <div id="edit1"><!--<img src="./Imagenes/edit-pen.png" alt="Editar" id="editimg" class="edit1"><p>Editar</p></div>-->

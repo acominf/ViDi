@@ -5,26 +5,29 @@
         header("Location: index.php");
 
     require_once "Usuario.php";
-echo "q pasa";
-    if($_POST)
+
+    var_dump($_FILES);
+    if($_POST || is_uploaded_file($_FILES['file-input']['tmp_name']))
     {
     	$c = new Conexion();
-    	var_dump($_POST);
 
     	//imagen
-		echo "q pasa";
-    	if(isset($_POST['file-input']) && $_POST['file-input']!=""&& is_uploaded_file($_FILES['file-input']['tmp_name']))
+    	if(is_uploaded_file($_FILES['file-input']['tmp_name']))
     	{
+            var_dump($_FILES);
     		$nombreDirectorio = "../imagenes/";
     		$nombreDirectorioBD = "./imagenes/";
-    		var_dump($_FILES);
+            $res = explode(".", $_FILES['file-input']['name']);
+            $ext = $res[count($res)-1];
 
-    		move_uploaded_file($_FILES['file-input']['tmp_name'], $nombreDirectorio.$_SESSION['idUs']);
+    		move_uploaded_file($_FILES['file-input']['tmp_name'], $nombreDirectorio.$_SESSION['idUs'].".".$ext);
+
+            echo $nombreDirectorio.$_SESSION['idUs'].".".$ext;
 
     		$urlIma = $nombreDirectorioBD.$_SESSION['idUs'];
 
-    		$query = "UPDATE users SET imaUrl=".$urlIma." WHERE id = ".$_SESSION['idUs'];	
-    		var_dump($query);
+    		$query = "UPDATE users SET imaUrl='".$urlIma."' WHERE id = ".$_SESSION['idUs'].".".$ext;	
+            echo $query;
 
     		$c->queryDML($query);
     	}
@@ -51,6 +54,6 @@ echo "q pasa";
     		$c->queryDML($query);
     	}
 
-    	header("Location: ../EditUsr.php");
+    	//header("Location: ../EditUsr.php");
     }
 ?>
