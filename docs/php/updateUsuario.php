@@ -54,6 +54,6 @@
     		$c->queryDML($query);
     	}
 
-    	//header("Location: ../EditUsr.php");
+    	header("Location: ../EditUsr.php");
     }
 ?>
