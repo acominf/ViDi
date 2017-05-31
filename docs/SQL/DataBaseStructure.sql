@@ -10,7 +10,7 @@ CREATE Table users(
     nombre varchar(20) NOT null,
     apellido varchar(30),
     edad int not null,
-	url varchar(100),
+	imaUrl varchar(100),
     PRIMARY KEY (id),
     UNIQUE nombre_usuario (usr)
 );
