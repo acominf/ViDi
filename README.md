@@ -1,6 +1,6 @@
 # ViDi
 
-![Header](https://raw.githubusercontent.com/acominf/ViDi/master/docs/Imagenes/logovidi.svg)
+![Header](https://raw.githubusercontent.com/acominf/ViDi/master/docs/Imagenes/logovidi1.png)
 
 ## Objetivo de la aplicación
 El objetivo es generar una pagina web para la Materia de Tecnologias Web, que consista en implementar los temas vistos en clase. 
@@ -45,7 +45,13 @@ Sera una página web enfocada a la reproducción y descarga de videos para los u
   - Reproducir videos
   - Pausar videos
   - Retomar video después de una pausa que cierre la página
-  
+
+
+## Diagrama de Componentes UML
+## Diagrama Entidad-Relación 
+## Video de la aplicación 
+## Enlace al sitio web
+
 ## Autor(es)
 El autor(es) del proyecto son:
 - Dulce Nataly Guadarrama Mani (@DulceMani)
