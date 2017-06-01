@@ -45,7 +45,11 @@ Sera una página web enfocada a la reproducción y descarga de videos para los u
   - Reproducir videos
   - Pausar videos
   - Retomar video después de una pausa que cierre la página
-  
+
+##Diagrama de Componentes UML
+##Diagrama Entidad-Relación 
+##Video de la aplicación 
+##Enlace al sitio web
 ## Autor(es)
 El autor(es) del proyecto son:
 - Dulce Nataly Guadarrama Mani (@DulceMani)
