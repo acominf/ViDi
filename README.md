@@ -52,6 +52,7 @@ Sera una página web enfocada a la reproducción y descarga de videos para los u
 ## Diagrama Entidad-Relación
 ![Header](https://raw.githubusercontent.com/acominf/ViDi/master/docs/Imagenes/modelo.png)
 ## Video de la aplicación 
+[https://youtu.be/J9yDPbuVOKk](https://youtu.be/J9yDPbuVOKk)
 ## Enlace al sitio web
 [http://148.224.194.33/vidi/](http://148.224.194.33/vidi/)
 
