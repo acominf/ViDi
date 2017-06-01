@@ -49,7 +49,8 @@ Sera una página web enfocada a la reproducción y descarga de videos para los u
 
 ## Diagrama de Componentes UML
 ![Header](https://raw.githubusercontent.com/acominf/ViDi/master/docs/Imagenes/DigComp.png)
-## Diagrama Entidad-Relación 
+## Diagrama Entidad-Relación
+![Header](https://raw.githubusercontent.com/acominf/ViDi/master/docs/Imagenes/modelo.png)
 ## Video de la aplicación 
 ## Enlace al sitio web
 
