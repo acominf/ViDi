@@ -40,7 +40,7 @@
                         echo '<a href="index.php"><img src="./Imagenes/iconovidi.svg" alt="incono_name" class="icName"></a>';
                         echo '<h1 class="nom">'.$this->usr.'</h1>';
                         echo '</div>';
-                        echo '<a href="index.php">Inicio</a>';
+                        echo '<a href="index.php" class="link">Inicio</a><br>';
                         echo '<a href="Subirvideos.php" class="link">Subir un Video</a><br>';
                         echo '<a href="Listas.php" class="link">Mis videos</a><br>';
                         echo '<a href="Favoritos.php" class="link">Favoritos</a><br>';
