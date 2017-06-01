@@ -28,7 +28,7 @@
              <?php 
                     require_once "./php/Conexion.php";
                     $conexion = new Conexion();
-                    $query = "SELECT id, nombre FROM video";
+                    $query = "SELECT id, nombre FROM video where id = ".$_SESSION['idUs'];
                     $tabla = $conexion->querySQL($query);
                     echo '<h2>Lista de los Videos</h2>';
                     for($i = 1;$i<count($tabla);$i++){
