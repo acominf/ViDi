@@ -1,6 +1,6 @@
 # ViDi
 
-![Header](https://raw.githubusercontent.com/acominf/ViDi/master/docs/Imagenes/logovidi.svg)
+![Header](https://raw.githubusercontent.com/acominf/ViDi/master/docs/Imagenes/logovidi1.png)
 
 ## Objetivo de la aplicación
 El objetivo es generar una pagina web para la Materia de Tecnologias Web, que consista en implementar los temas vistos en clase. 
