@@ -38,7 +38,7 @@
             <div class="centraDatv">
             <form method="post" action="./php/UploadVideo.php" enctype="multipart/form-data" >
                 Nombre del Video:<br>   
-                <input type="text" name="novid" placeholder="Nombre del Video"><br>
+                <input type="text" name="novid" placeholder="Nombre del Video">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="private" value="1"> Privado<br>
                 <input type="file" name="fileVi" accept="video/*" id="fileVi"><br>
                 <input type="submit" value="Subir archivo" class="boton"/>
             </form>

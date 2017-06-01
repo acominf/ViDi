@@ -49,7 +49,7 @@
         $c = new Conexion();
         $i=0;
 
-        $videos = $c->querySQL('Select * from video');
+        $videos = $c->querySQL('Select * from video where privado = 0');
         for($i =  1; $i<count($videos) && $i<$nVideos;$i++)
         {
           $v = new Video($videos[$i][0]);

@@ -15,12 +15,17 @@
         $nombreDirectorioBD = "./videos/";
         $nombreFichero = $nombreVid.".mp4";
         $nombreCompleto = $nombreDirectorio . $nombreFichero;
+        if(isset($_SESSION['private']))
+            $privado = 1;
+        else
+            $privado = 0;
 
         if (!is_file($nombreCompleto))
         {
             move_uploaded_file($_FILES['fileVi']['tmp_name'], $nombreDirectorio.$nombreFichero);
 
-            $query = "insert into video values(null,'".$nombreFichero."','".$nombreDirectorioBD . $nombreFichero."')";
+            $query = "insert into video values(null,'".$nombreFichero."','".$nombreDirectorioBD . $nombreFichero."',".$_SESSION['idUs'].", ".$privado.")";
+            var_dump($query);
 
             $conexion->queryDML($query);
 

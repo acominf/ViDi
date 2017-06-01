@@ -19,6 +19,8 @@ create table video(
 	id bigint not null auto_increment,
 	nombre varchar(50) not null,
 	url varchar(100) not null,
+	idpropietario bigint not null,
+	privado tinyint not null,
 	PRIMARY KEY (id),
 	UNIQUE nombre_video (nombre)
 );
