@@ -53,6 +53,7 @@ Sera una página web enfocada a la reproducción y descarga de videos para los u
 ![Header](https://raw.githubusercontent.com/acominf/ViDi/master/docs/Imagenes/modelo.png)
 ## Video de la aplicación 
 ## Enlace al sitio web
+[http://148.224.194.33/vidi/](http://148.224.194.33/vidi/)
 
 ## Autor(es)
 El autor(es) del proyecto son:
